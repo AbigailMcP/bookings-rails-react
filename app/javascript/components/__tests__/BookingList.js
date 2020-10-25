@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Bookings from '../';
+import BookingList from '../BookingList';
 
 it('renders correctly', () => {
-  const tree = renderer.create(<Bookings />).toJSON();
+  const tree = renderer.create(<BookingList />).toJSON();
   expect(tree).toMatchSnapshot();
 });

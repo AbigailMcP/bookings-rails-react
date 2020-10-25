@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
 
-export default function Form({ setFilter, spaces }) {
+const Submit = styled.button`
+  width: 100px;
+  background: white;
+`
+
+// A select dropdown used to filter the booking list by space name.
+export default function Filter({ setFilter, spaces }) {
   const [value, setValue] = useState();
 
   const handleChange = (event) => {
@@ -15,9 +22,11 @@ export default function Form({ setFilter, spaces }) {
   return (
     <form onSubmit={handleSubmit}>
       <select value={value} onChange={handleChange}>
-        {spaces.map(({id, name}) => <option key={id} value={id}>{name}</option>)}       
+        {spaces.map(({ id, name }) =>
+          <option key={id} value={id}>{name}</option>
+        )}
       </select>
-     <button>Submit</button>
+     <Submit>Submit</Submit>
     </form>
   )
 }

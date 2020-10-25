@@ -16,7 +16,8 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react_ujs": "^2.6.1"
+    "react_ujs": "^2.6.1",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "jest": "^26.6.1",
