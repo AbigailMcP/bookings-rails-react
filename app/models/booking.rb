@@ -5,6 +5,11 @@ class Booking < ApplicationRecord
 
   validates_presence_of :start_date, :end_date, :description
 
+  # TODO: Move this into a JSON view using somethting like JBuilder, and do the
+  # same for spaces.
+  #
+  # Returns a version of a Booking instance that's most useful for the
+  # frontend. Let's handle date formatting here in Ruby cos it's easier :)
   def serialize
     {
       id: id,
